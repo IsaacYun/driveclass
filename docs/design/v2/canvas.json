@@ -1,0 +1,19 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-11-11T03:10:00Z"},
+  "title": "DriveClass 화면 시안",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 1700, "h": 1210, "title": "주행 중 · 재생"},
+    "Parked.dc.html": {"x": 1780, "y": 0, "w": 1700, "h": 1210, "title": "정차 중 · 오늘의 정리"},
+    "Settings.dc.html": {"x": 3560, "y": 0, "w": 1700, "h": 1210, "title": "데모 설정 팝업"}
+  },
+  "order": ["Main.dc.html", "Parked.dc.html", "Settings.dc.html"],
+  "notes": {
+    "title": {"x": 0, "y": -300, "text": "DriveClass · Pleos 디자인 시스템 적용 시안 v2", "kind": "title1", "maxW": 5260}
+  },
+  "designSystems": [
+    {"title": "Pleos", "namespace": "pleos", "version": "1794364297-732a", "copiedAt": "2026-11-11T03:10:00Z"}
+  ]
+}

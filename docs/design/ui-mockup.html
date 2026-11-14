@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DriveClass UI 시안</title>
+<link href="https://fonts.googleapis.com/css2?family=Asta+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<!--
+  DriveClass 화면 시안 v1 (2026-11-11).
+  색·반경·그림자·글자 단계는 Pleos 디자인 시스템 tokens.json 값, 서체는 Asta Sans(42dot, OFL).
+  아이콘은 Tabler 대체품이다. 디자인 시스템에 아이콘 파일이 없고 공식 세트는 Figma에만 있다.
+  실제 화면은 2560×1440(앱 창 약 1700×1210)이라 여기 크기는 약 0.38배로 줄인 것이다.
+  다음 단계: 디자인 시스템 bundle.css 컴포넌트 규격 엄격 적용, 3D 아이콘 배치.
+-->
+<style>
+body{margin:0;padding:24px 16px;background:#e0e1e6;font-family:system-ui,sans-serif}
+.wrap{max-width:680px;margin:0 auto}
+.fr{background:#f7f8fa;border-radius:14px;padding:22px 24px;color:#131417;font-family:"Asta Sans",system-ui,sans-serif;aspect-ratio:1700/1210;box-sizing:border-box;display:flex;flex-direction:column;gap:14px}
+.fr b{font-weight:700}
+.cd{background:#fff;border-radius:18px;box-shadow:0 2px 9px rgba(0,0,0,.08)}
+.t3{color:rgba(19,20,23,.64)}.t2{color:rgba(19,20,23,.84)}
+.cap{font-size:13px;color:#44464e;margin:18px 0 8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<p class="cap">① 주행 중 · 재생 화면 (서체 Asta Sans, 아이콘은 아직 대체품)</p>
+<div class="fr">
+ <div style="display:flex;align-items:center;justify-content:space-between">
+  <div><div class="t3" style="font-size:11px">영어 회의 표현</div><b style="font-size:17px">오늘의 코스</b></div>
+  <div style="display:flex;align-items:center;gap:8px;background:#edeef2;border-radius:99px;padding:7px 14px">
+   <i class="ti ti-navigation" style="color:#0064ff;font-size:16px" aria-hidden="true"></i>
+   <b style="font-size:14px">도착까지 61분</b><span class="t3" style="font-size:11px">내비 연동</span></div>
+ </div>
+ <div class="cd" style="padding:18px 20px;display:flex;flex-direction:column;gap:14px">
+  <div style="display:flex;align-items:center;gap:16px">
+   <div style="flex:1">
+    <b style="font-size:11px;color:#0064ff">지금 듣는 중 · 2 / 6</b>
+    <div style="font-size:22px;font-weight:800;margin:2px 0">회의 시작하기</div>
+    <div class="t2" style="font-size:12px">도착 전에 딱 맞게 끝나는 14분 코스예요</div>
+   </div>
+   <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+    <div style="width:62px;height:62px;border-radius:50%;background:#44464e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:28px"><i class="ti ti-player-pause" aria-hidden="true"></i></div>
+    <span class="t3" style="font-size:11px">일시정지</span></div>
+   <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+    <div style="width:48px;height:48px;border-radius:50%;background:rgba(19,20,23,.05);display:flex;align-items:center;justify-content:center;font-size:22px"><i class="ti ti-player-skip-forward" aria-hidden="true"></i></div>
+    <span class="t3" style="font-size:11px">다음</span></div>
+  </div>
+  <div>
+   <div style="display:flex;gap:4px;height:8px">
+    <div style="flex:44;background:#0064ff;border-radius:99px"></div>
+    <div style="flex:151;background:rgba(19,20,23,.1);border-radius:99px;overflow:hidden"><div style="width:40%;height:100%;background:#0064ff"></div></div>
+    <div style="flex:260;background:rgba(19,20,23,.1);border-radius:99px"></div>
+    <div style="flex:171;background:rgba(19,20,23,.1);border-radius:99px"></div>
+    <div style="flex:190;background:rgba(19,20,23,.1);border-radius:99px"></div>
+    <div style="flex:45;background:rgba(19,20,23,.1);border-radius:99px"></div>
+   </div>
+   <div class="t3" style="display:flex;justify-content:space-between;font-size:11px;margin-top:5px"><span>2분 들음</span><span>도착 47분 전에 끝나요</span></div>
+  </div>
+ </div>
+ <div style="display:flex;gap:12px;flex:1;min-height:0">
+  <div class="cd" style="flex:1.4;padding:14px 18px">
+   <div class="t3" style="font-size:11px;margin-bottom:6px">다음에 들을 블록</div>
+   <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:0.5px solid rgba(19,20,23,.1)"><span>의견 묻고 답하기</span><span class="t3">4분</span></div>
+   <div style="display:flex;justify-content:space-between;font-size:13px;padding:5px 0;border-bottom:0.5px solid rgba(19,20,23,.1)"><span>일정 조율하기</span><span class="t3">3분</span></div>
+   <div style="font-size:13px;padding:5px 0" class="t3">+ 2개 더</div>
+  </div>
+  <div class="cd" style="flex:1;padding:14px 18px;display:flex;flex-direction:column;justify-content:center;gap:4px">
+   <i class="ti ti-lock t3" style="font-size:20px" aria-hidden="true"></i>
+   <b style="font-size:14px">오늘의 정리</b>
+   <div class="t3" style="font-size:11px">정차하면 볼 수 있어요</div>
+  </div>
+ </div>
+ <div class="t3" style="font-size:11px;text-align:right">데모 설정</div>
+</div>
+<p class="cap">② 정차 중 · 오늘의 정리</p>
+<div class="fr">
+ <div style="display:flex;align-items:center;gap:10px">
+  <div style="width:36px;height:36px;border-radius:50%;background:rgba(19,20,23,.05);display:flex;align-items:center;justify-content:center;font-size:18px"><i class="ti ti-chevron-left" aria-hidden="true"></i></div>
+  <div><b style="font-size:17px">오늘의 정리</b><div class="t3" style="font-size:11px">들은 블록 3개 · 표현 7개</div></div>
+ </div>
+ <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;flex:1;min-height:0">
+  <div class="cd" style="padding:14px 18px">
+   <span style="font-size:11px;background:#edeef2;border-radius:99px;padding:3px 10px">회의 시작하기</span>
+   <b style="display:block;font-size:13px;margin-top:10px">Shall we get started?</b><div class="t3" style="font-size:11px">시작할까요?</div>
+   <b style="display:block;font-size:13px;margin-top:8px">We're here to talk about the budget.</b><div class="t3" style="font-size:11px">예산 이야기를 하려고 모였습니다.</div>
+   <b style="display:block;font-size:13px;margin-top:8px">Let's keep it short.</b><div class="t3" style="font-size:11px">짧게 하죠.</div>
+  </div>
+  <div class="cd" style="padding:14px 18px">
+   <span style="font-size:11px;background:#edeef2;border-radius:99px;padding:3px 10px">의견 묻고 답하기</span>
+   <b style="display:block;font-size:13px;margin-top:10px">What do you think about this plan?</b><div class="t3" style="font-size:11px">이 계획 어떻게 생각하세요?</div>
+   <b style="display:block;font-size:13px;margin-top:8px">I agree with you on that.</b><div class="t3" style="font-size:11px">그 점은 동의합니다.</div>
+   <b style="display:block;font-size:13px;margin-top:8px">I see your point, but…</b><div class="t3" style="font-size:11px">무슨 말씀인지 알겠습니다만…</div>
+  </div>
+ </div>
+</div>
+</div>
+</body>
+</html>

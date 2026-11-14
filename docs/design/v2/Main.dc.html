@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>주행 중 재생 화면</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/pleos/tokens.css">
+<link rel="stylesheet" href="ds/pleos/components/bundle.css">
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div class="pl-root" style="width: 1700px; height: 1210px; box-sizing: border-box; display: flex; flex-direction: column; background: var(--background_primary); font-family: var(--font-sans); color: var(--text_dark_primary);">
+  <div class="pl-nav" style="padding: 0 var(--space_48); height: 128px; gap: 16px;">
+    <div class="pl-nav__app" style="background: var(--informative_positive);" aria-hidden="true"></div>
+    <button class="pl-nav__menu" type="button">드라이브클래스</button>
+    <button class="pl-nav__menu pl-nav__menu--sub" type="button">영어 회의 표현</button>
+    <span class="pl-nav__sp"></span>
+    <div style="display: flex; align-items: center; gap: 16px; height: 80px; padding: 0 32px 0 16px; border-radius: var(--radius_full); background: var(--surface_high);">
+      <img src="/_blob/b512923f7f215047c952255f94c8577b" alt="" style="width: 72px; height: 72px;">
+      <span style="font: var(--text-title_small); color: var(--text_dark_primary);">도착까지 61분</span>
+      <span style="font: var(--text-label_medium); color: var(--text_dark_tertiary);">내비 연동</span>
+    </div>
+    <button class="pl-ibtn pl-ibtn--plain pl-press" type="button" aria-label="데모 설정"><svg class="pl-ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.2"></circle><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M5.5 18.5l2.1-2.1M16.4 7.6l2.1-2.1"></path></svg></button>
+  </div>
+
+  <div style="flex: 1; display: flex; flex-direction: column; gap: var(--space_24); padding: 0 var(--space_48) var(--space_48);">
+    <section style="display: flex; flex-direction: column; gap: var(--space_40); padding: var(--space_48); border-radius: var(--radius_48); background: var(--surface_basic); box-shadow: var(--shadow_level_1);">
+      <div style="display: flex; align-items: center; gap: var(--space_40);">
+        <img src="/_blob/347327bf4715cc849524408eefa2fcab" alt="" style="width: 200px; height: 200px; flex: none;">
+        <div style="flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font: var(--text-label_medium); font-weight: 700; color: var(--informative_positive);">지금 듣는 중 · 2 / 6</span>
+          <h1 style="margin: 0; font: var(--text-headline_medium); color: var(--text_dark_primary);">회의 시작하기</h1>
+          <p style="margin: 0; font: var(--text-body_medium); color: var(--text_dark_secondary);">도착 전에 딱 맞게 끝나는 14분 코스예요</p>
+        </div>
+        <div style="display: flex; gap: var(--space_24); flex: none;">
+          <button class="pl-btn pl-btn--secondary pl-btn--large pl-press" type="button"><svg class="pl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"></path></svg>일시정지</button>
+          <button class="pl-btn pl-btn--large pl-press" type="button"><svg class="pl-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5l9 7-9 7z"></path><path d="M18 5v14"></path></svg>다음</button>
+        </div>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div style="display: flex; gap: 8px; height: 16px;" role="img" aria-label="코스 6블록 중 1블록 완료, 2블록째 40% 진행">
+          <div style="flex: 44; border-radius: var(--radius_full); background: var(--informative_positive);"></div>
+          <div style="flex: 151; border-radius: var(--radius_full); background: linear-gradient(90deg, var(--informative_positive) 40%, var(--basic_alpha_dark_100) 40%);"></div>
+          <div style="flex: 260; border-radius: var(--radius_full); background: var(--basic_alpha_dark_100);"></div>
+          <div style="flex: 171; border-radius: var(--radius_full); background: var(--basic_alpha_dark_100);"></div>
+          <div style="flex: 190; border-radius: var(--radius_full); background: var(--basic_alpha_dark_100);"></div>
+          <div style="flex: 45; border-radius: var(--radius_full); background: var(--basic_alpha_dark_100);"></div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font: var(--text-label_medium); color: var(--text_dark_tertiary);">
+          <span>2분 들음</span>
+          <span>도착 47분 전에 끝나요</span>
+        </div>
+      </div>
+    </section>
+
+    <div style="flex: 1; min-height: 0; display: flex; gap: var(--space_24);">
+      <section style="flex: 1.4; display: flex; flex-direction: column; padding: var(--space_40) var(--space_48); border-radius: var(--radius_48); background: var(--surface_basic); box-shadow: var(--shadow_level_1);">
+        <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 16px;">
+          <img src="/_blob/85e9f7d55cb3a99eb6a1f8cd6263b282" alt="" style="width: 88px; height: 88px;">
+          <h2 style="margin: 0; font: var(--text-title_small); color: var(--text_dark_primary);">다음에 들을 블록</h2>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; height: 88px; box-shadow: inset 0 -2px 0 var(--basic_alpha_dark_100); font: var(--text-body_large);"><span>의견 묻고 답하기</span><span style="color: var(--text_dark_tertiary);">4분</span></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; height: 88px; box-shadow: inset 0 -2px 0 var(--basic_alpha_dark_100); font: var(--text-body_large);"><span>일정 조율하기</span><span style="color: var(--text_dark_tertiary);">3분</span></div>
+        <div style="display: flex; align-items: center; height: 88px; font: var(--text-body_medium); color: var(--text_dark_tertiary);">그다음 2개 블록</div>
+      </section>
+      <section style="flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; gap: 12px; padding: var(--space_40) var(--space_48); border-radius: var(--radius_48); background: var(--surface_basic); box-shadow: var(--shadow_level_1);">
+        <img src="/_blob/64f912ce1d78e67f1ec28f7d8afc2c10" alt="" style="width: 140px; height: 140px;">
+        <h2 style="margin: 0; font: var(--text-title_small); color: var(--text_dark_primary);">오늘의 정리</h2>
+        <p style="margin: 0; font: var(--text-body_small); color: var(--text_dark_secondary);">정차하면 오늘 들은 표현을 볼 수 있어요</p>
+      </section>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1700,"height":1210}}'>
+class Component extends DCLogic {
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
